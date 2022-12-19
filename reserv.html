@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navigation">
+        <img src="images/logo.png" alt="" />
+        <div>
+          <nav>
+            <ul>
+              <li><a href="index.html">ACCUEIL</a></li>
+              <li><a href="reserv.html">RESERVATION</a></li>
+              <li><a href="">CONTACTS</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <p>FR</p>
+          <img src="images/connexion.png" alt="" />
+          <p>Se connecter</p>
+          <body id="body" class="dark-mode">
+            <checkbox
+              type="button"
+              name="dark_light"
+              onclick="toggleDarkLight()"
+              title="Toggle dark/light mode"
+            >
+              🌛
+            </checkbox>
+        </div>
+      </div>
+    </header>
+    <img src="images/ligne.png" id="ligne" />
+    <form class="row-g-3">
+      <div class="col-md-6">
+        <label for="inputState" class="form-label">Destination</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>PARIS</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <label for="inputState" class="form-label">Date</label>
+          <label for="inputState" class="form-label">1 NUIT</label>
+        </div>
+        <div>
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2022-06-09"
+            min="2022-06-09"
+            max="2022-12-31"
+          />
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="2022-06-10"
+            min="2022-06-09"
+            max="2022-12-31"
+          />
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="inputState" class="form-label">Chambres et occupants</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>1 personne, 1 lit</option>
+          <option>2 personnes, 1 lit</option>
+          <option>2 personnes, 2 lits</option>
+          <option>Plus...</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="inputState" class="form-label">Tarifs spéciaux</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>OUI</option>
+          <option>NON</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" />
+          <label class="form-check-label" for="gridCheck">
+            Utiliser des points avantages.
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">
+          TROUVEZ DES HÔTELS
+        </button>
+      </div>
+    </form>
+    <img src="images/ligne.png" id="ligne" />
+    <div class="footi1">
+      <a href="">Principales destinations</a>
+      <img src="images/ligne.png" id="ligne" />
+      <a href="">Pour nos clients</a>
+      <img src="images/ligne.png" id="ligne" />
+      <a href="">Notre entreprise</a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function toggleDarkLight() {
+        var body = document.getElementById("body");
+        var currentClass = body.className;
+        body.className =
+          currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+      }
+    </script>
+  </body>
+</html>
